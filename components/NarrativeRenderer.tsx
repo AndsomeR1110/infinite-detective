@@ -48,7 +48,7 @@ const MARKDOWN_RULES = [
       const quotedText = content.replace(/["「」]/g, '');
       return (
         <span key={match} className="text-white font-semibold border-l-2 border-cyber-purple pl-3 my-2 block">
-          "{quotedText}"
+          &ldquo;{quotedText}&rdquo;
         </span>
       );
     },
@@ -216,7 +216,7 @@ function processMarkdownTags(text: string): (string | React.ReactNode)[] {
         result.push(
           <span key={result.length}
                 className="text-white font-semibold border-l-2 border-cyber-purple pl-3 my-2 block">
-            "{content}"
+            &ldquo;{content}&rdquo;
           </span>
         );
         break;

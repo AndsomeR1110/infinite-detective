@@ -42,7 +42,7 @@ export default function TestNarrative() {
           <ul className="list-disc list-inside space-y-2 text-sm">
             <li>**粗体**: `**绿色代码流**` → 绿色代码流（粉色高亮）</li>
             <li>*斜体*: `*模糊的图像*` → 模糊的图像（灰色斜体）</li>
-            <li>"对话": `"无限侦探。..."` → 独立一行，左侧紫色边框</li>
+            <li>&ldquo;对话&rdquo;: &ldquo;`无限侦探。...`&rdquo; → 独立一行，左侧紫色边框</li>
             <li>`代码`: `记忆碎片` → 记忆碎片（代码样式）</li>
           </ul>
         </div>

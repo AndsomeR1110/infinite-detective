@@ -211,7 +211,7 @@ export default function InfiniteDetectiveGame() {
               无限侦探
             </h1>
             <p className="text-2xl text-gray-300 mb-8 text-center font-serif italic border-b border-gray-700 pb-4">
-              "The Infinite Detective"
+              &ldquo;The Infinite Detective&rdquo;
             </p>
             <p className="text-lg text-gray-400 mb-12 text-center max-w-lg">
               赛博朋克 × 黑色电影<br />
