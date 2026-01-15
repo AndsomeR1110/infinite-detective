@@ -1,0 +1,169 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ==================== 高 Tension 效果 ==================== */
+
+@keyframes red-pulse {
+  0%, 100% {
+    box-shadow: inset 0 0 50px rgba(220, 38, 38, 0.3);
+  }
+  50% {
+    box-shadow: inset 0 0 100px rgba(220, 38, 38, 0.5);
+  }
+}
+
+@keyframes shake {
+  0%, 100% {
+    transform: translate(0, 0);
+  }
+  10%, 30%, 50%, 70%, 90% {
+    transform: translate(-2px, 0);
+  }
+  20%, 40%, 60%, 80% {
+    transform: translate(2px, 0);
+  }
+}
+
+.animate-shake {
+  animation: shake 0.5s infinite;
+}
+
+.animate-red-pulse {
+  animation: red-pulse 2s infinite;
+}
+
+/* ==================== Glitch 效果 ==================== */
+
+@keyframes glitch {
+  0% {
+    transform: translate(0);
+  }
+  20% {
+    transform: translate(-2px, 2px);
+  }
+  40% {
+    transform: translate(-2px, -2px);
+  }
+  60% {
+    transform: translate(2px, 2px);
+  }
+  80% {
+    transform: translate(2px, -2px);
+  }
+  100% {
+    transform: translate(0);
+  }
+}
+
+/* ==================== 打字机光标 ==================== */
+
+@keyframes blink {
+  0%, 50% {
+    opacity: 1;
+  }
+  51%, 100% {
+    opacity: 0;
+  }
+}
+
+.animate-pulse {
+  animation: blink 1s infinite;
+}
+
+/* ==================== 选项按钮淡入 ==================== */
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in {
+  animation: fade-in 0.3s ease-out forwards;
+}
+
+/* ==================== 氛围效果 ==================== */
+
+.filter-blur-sm {
+  filter: blur(1px);
+}
+
+.filter-blur-md {
+  filter: blur(3px);
+}
+
+/* 霓虹雨夜氛围 */
+.atmosphere-neon-rain {
+  background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+}
+
+/* 黑色电影酒吧 */
+.atmosphere-noir-bar {
+  background: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 50%, #2d2d2d 100%);
+  filter: grayscale(0.8);
+}
+
+/* 数字空间 */
+.atmosphere-matrix-digital {
+  background: linear-gradient(135deg, #000000 0%, #001a00 100%);
+  position: relative;
+}
+
+.atmosphere-matrix-digital::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: repeating-linear-gradient(
+    0deg,
+    transparent,
+    transparent 2px,
+    rgba(0, 255, 0, 0.03) 2px,
+    rgba(0, 255, 0, 0.03) 4px
+  );
+  pointer-events: none;
+}
+
+/* ==================== 理智值状态条动画 ==================== */
+
+@keyframes sanity-warning {
+  0%, 100% {
+    box-shadow: 0 0 5px rgba(239, 68, 68, 0.5);
+  }
+  50% {
+    box-shadow: 0 0 20px rgba(239, 68, 68, 0.8);
+  }
+}
+
+.sanity-critical {
+  animation: sanity-warning 1s infinite;
+}
+
+/* ==================== 工具类 ==================== */
+
+.pulse-slow {
+  animation: pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.8;
+  }
+}
+
+/* 文字去饱和 */
+.desaturate {
+  filter: grayscale(0.5);
+}
+
+.desaturate-strong {
+  filter: grayscale(0.8);
+}

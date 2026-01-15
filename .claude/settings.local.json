@@ -1,0 +1,19 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(netstat:*)",
+      "Bash(findstr:*)",
+      "Bash(curl:*)",
+      "Bash(tasklist:*)",
+      "Bash(npm run dev)",
+      "Bash(taskkill:*)",
+      "Bash(npx next build)",
+      "Bash(npx tsc:*)",
+      "Bash(if exist:*)",
+      "Bash(while read pid)",
+      "Bash(do taskkill //F //PID $pid)",
+      "Bash(echo:*)",
+      "Bash(done:*)"
+    ]
+  }
+}
